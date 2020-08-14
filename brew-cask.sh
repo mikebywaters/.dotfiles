@@ -16,7 +16,6 @@ apps=(
     # Browsers
     firefox
     google-chrome
-    phantomjs
 
     # Automation/Productivity/Team Tools.
     alfred
@@ -58,10 +57,13 @@ apps=(
     zoomus
     slack
 
-    #linktree
+    # Linktree
     pritunl
     zeplin
     tuple
+
+    # misc
+    steam
     )
 
 for application in ${apps[@]}
