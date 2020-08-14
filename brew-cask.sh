@@ -4,10 +4,9 @@
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Install Caskroom
-brew tap caskroom/cask
 brew tap buo/cask-upgrade
 brew install brew-cask-completion
-brew tap caskroom/versions
+brew tap homebrew/cask-versions
 
 brew cask outdated # List outdated casks.
 
@@ -67,11 +66,6 @@ apps=(
 for application in ${apps[@]}
 do
     brew cask install $application
-done
-
-for application in ${apps[@]}
-do
-    brew install caskroom/cask/$application
 done
 
 brew cu -afy # Force ugprade of all packages.
