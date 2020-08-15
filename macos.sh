@@ -231,6 +231,36 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
 ###############################################################################
+# Energy Saver settings                                                       #
+###############################################################################
+
+# ---------------
+# on Battery
+# ---------------
+
+# Set Disk sleep to 60 minutes
+sudo pmset -a disksleep 60 > /dev/null
+
+# Set System Sleep to 30 minutes
+sudo pmset -a sleep 30 > /dev/null
+
+# Set Display sleep to 10 minutes
+sudo pmset -a displaysleep 10 > /dev/null
+
+# ---------------
+# on Power
+# ---------------
+
+# Set Display sleep to 10 minutes
+sudo systemsetup -setdisplaysleep 10
+
+# Set Hard Disk Sleep to Never
+sudo systemsetup -setharddisksleep 0
+
+# Set Computer Sleep to Never
+sudo systemsetup -setcomputersleep 0
+
+###############################################################################
 # Finder                                                                      #
 ###############################################################################
 
@@ -444,23 +474,6 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 # Top left screen corner → Desktop
 defaults write com.apple.dock wvous-tl-corner -int 4
 defaults write com.apple.dock wvous-tl-modifier -int 0
-
-###############################################################################
-# Dock apps                                                                       #
-###############################################################################
-
-defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/System Preferences.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"; killall Dock; killall Dock
-defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/LastPass.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"; killall Dock; killall Dock
-defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Calendar.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"; killall Dock; killall Dock
-defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/FaceTime.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"; killall Dock; killall Dock
-defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Goofy.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"; killall Dock; killall Dock
-defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Messages.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"; killall Dock; killall Dock
-defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Microsoft Teams.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"; killall Dock; killall Dock
-defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/WhatsApp.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"; killall Dock; killall Dock
-defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Slack.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"; killall Dock; killall Dock
-defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/GitHub Desktop.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"; killall Dock; killall Dock
-defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Firefox.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"; killall Dock; killall Dock
-defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/VLC.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"; killall Dock; killall Dock
 
 ###############################################################################
 # Safari & WebKit                                                             #
