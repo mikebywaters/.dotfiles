@@ -51,6 +51,7 @@ apps=(
 
     # misc
     steam
+    private-internet-access
     )
 
 for application in ${apps[@]}
