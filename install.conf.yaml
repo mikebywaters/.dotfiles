@@ -14,7 +14,6 @@
     - [. $HOME/.dotfiles/shell/init.sh, Initialising zsh]
 - shell:
     - [. $HOME/.dotfiles/brew/init.sh, Initialising Homebrew]
-    - [. $HOME/.dotfiles/git/init.sh, Initialising git]
     - [git submodule update --init --recursive, Installing submodules]
 - create:
     - ~/.nvm
