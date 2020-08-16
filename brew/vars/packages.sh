@@ -34,6 +34,7 @@ packages=(
     nvm
     yarn
 
+    pyenv
     zsh
     zsh-completions
     zsh-syntax-highlighting
