@@ -24,6 +24,7 @@ apps=(
     the-unarchiver
     micro-snitch
     spectacle
+    dropbox
     shift
 
     # Password managers
