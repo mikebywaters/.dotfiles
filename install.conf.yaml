@@ -10,16 +10,13 @@
 - clean: ['~']
 - link:
     ~/.zshrc: { path: .zshrc }
-- shell:
-    - [. $HOME/.dotfiles/shell/init.sh, Initialising zsh]
-- shell:
-    - [. $HOME/.dotfiles/brew/init.sh, Initialising Homebrew]
-    - [git submodule update --init --recursive, Installing submodules]
 - create:
     - ~/.nvm
 - shell:
-    - [. $HOME/.dotfiles/python/install.sh, Installing Python & pyenv]
-    - [. $HOME/.dotfiles/ansible/install.sh, Installing ansible]
+    - [git submodule update --init --recursive, Installing submodules]
+    - [. $HOME/.dotfiles/brew/init.sh, Initialising Homebrew]
     - [. $HOME/.dotfiles/brew/install.sh, Installing packages]
     - [. $HOME/.dotfiles/brew/apps.sh, Installing applications]
+    - [. $HOME/.dotfiles/shell/init.sh, Initialising zsh]
+    - [. $HOME/.dotfiles/ansible/install.sh, Installing ansible]
     - [. $HOME/.dotfiles/macos/init.sh, Setting OS preferences]
