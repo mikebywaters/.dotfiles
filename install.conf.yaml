@@ -11,7 +11,6 @@
 - link:
     ~/.zshrc: { path: .zshrc }
 - shell:
-    - [xcode-select --install, Installing xcode devtools]
     - [. $HOME/.dotfiles/shell/init.sh, Initialising zsh]
 - shell:
     - [. $HOME/.dotfiles/brew/init.sh, Initialising Homebrew]
