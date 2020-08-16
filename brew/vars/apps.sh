@@ -1,16 +1,4 @@
 #!/bin/bash
-
-# Let's get these puppies into the Applications directory.
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-# Install Caskroom
-brew tap buo/cask-upgrade
-brew install brew-cask-completion
-brew tap homebrew/cask-versions
-
-brew cask outdated # List outdated casks.
-
-# Install packages
 apps=(
     # Browsers
     firefox
@@ -48,7 +36,6 @@ apps=(
 
     # Music
     spotify
-    splice
     
     # Chats
     whatsapp

@@ -8,15 +8,20 @@
       stderr: true
       stdin: true
 - clean: ['~']
-- shell:
-    - [git submodule update --init --recursive, Installing submodules]
-- create:
-   - ~/.nvm
-
 - link:
     ~/.zshrc: { path: .zshrc }
-
 - shell:
-    - [. $HOME/.dotfiles/brew.sh, Installing packages]
-    - [. $HOME/.dotfiles/brew-cask.sh, Installing applications]
-    - [. $HOME/.dotfiles/macos.sh, Setting preferences]
+    - [xcode-select --install, Installing xcode devtools]
+    - [. $HOME/.dotfiles/shell/init.sh, Initialising zsh]
+- shell:
+    - [. $HOME/.dotfiles/brew/init.sh, Initialising Homebrew]
+    - [. $HOME/.dotfiles/git/init.sh, Initialising git]
+    - [git submodule update --init --recursive, Installing submodules]
+- create:
+    - ~/.nvm
+- shell:
+    - [. $HOME/.dotfiles/python/install.sh, Installing Python & pyenv]
+    - [. $HOME/.dotfiles/ansible/install.sh, Installing ansible]
+    - [. $HOME/.dotfiles/brew/install.sh, Installing packages]
+    - [. $HOME/.dotfiles/brew/apps.sh, Installing applications]
+    - [. $HOME/.dotfiles/macos/init.sh, Setting OS preferences]
